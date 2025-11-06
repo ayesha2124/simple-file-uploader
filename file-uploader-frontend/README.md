@@ -1,18 +1,22 @@
-# React + Vite
+# File Uploader Project 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple file uploader web app that allows users to upload files to AWS S3 and returns a public link to access the file.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Upload text, JPEG, and PNG files
+- File size limit (default: 10 MB)
+- File type validation
+- Publicly accessible uploaded files
+- Returns file URL after successful upload
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Backend: Node.js, Express
+- File handling: Multer
+- Cloud Storage: AWS S3
+- Environment variables: dotenv
+- CORS enabled for frontend requests
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Reflection
+During this project, I learned how to integrate AWS S3 with a Node.js backend to handle file uploads securely. The most challenging part was configuring the bucket permissions and public access correctly. I also added file size limits, type checks, and metadata handling for extra functionality.
